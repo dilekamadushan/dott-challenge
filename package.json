@@ -1,20 +1,20 @@
 {
-  "name": "eslint-prettier-boilerplate",
+  "name": "challenge",
   "version": "3.1.1",
-  "description": "Starter repository for a JS project using Prettier formatting.",
+  "description": "Calculates distance to the closest white cell in a bitmap",
   "main": "./build/index.js",
   "scripts": {
     "lint": "eslint **/*.ts",
     "start": " yarn tsc && node build/index.js/index.js",
     "lint:fix": "eslint --fix **/*.ts",
-    "test": "jest"
+    "test": "tsc && jest",
+    "build": "tsc"
   },
   "keywords": [],
-  "author": "Travis Horn (https://travishorn.com)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/travishorn/eslint-prettier-boilerplate"
+    "url": "https://github.com/dilekamadushan"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
