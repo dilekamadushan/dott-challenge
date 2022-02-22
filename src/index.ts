@@ -47,13 +47,13 @@ rl.on("line", (line) => {
     }
 });
 
-const calculateDistances = (N: number, M: number, matrix): number[][] => {
+export const calculateDistances = (N: number, M: number, matrix): number[][] => {
     console.log(matrix);
     const rowLen = N;
     const colLen = M;
 
-    const distances = [];
-    const directions = [
+    const distances: number[][] = [];
+    const directions: number[][] = [
         [-1, 0],
         [1, 0],
         [0, -1],
