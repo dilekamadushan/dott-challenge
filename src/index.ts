@@ -23,18 +23,18 @@ rl.on("line", (line) => {
     totalTestCases = parseInt(line);
     readInputLines = [];
     console.log("Number of total lines", totalTestCases);
-  }
-  if (readInputLines.length === 1) {
+  } else if (readInputLines.length === 1) {
     let input = readInputLines[0];
     input = input.split(" ").map((char) => parseInt(char));
     N = input[0];
     M = input[1];
     console.log("N, M", N, M);
-  }
-
-  if (readInputLines.length === N + 1) {
+  } else if (readInputLines.length === N + 1) {
     console.log("Finished taking input for this iteration", readInputLines);
-    const ans = calculateDistances(N, M, readInputLines.slice(1));
+    readInputLines = readInputLines
+      .slice(1)
+      .map((line) => line.split("").map((char) => parseInt(char)));
+    const ans = calculateDistances(N, M, readInputLines);
     console.log("Answer returned", ans);
     answers.push(ans);
     numberOfCalculations += 1;
@@ -48,10 +48,6 @@ rl.on("line", (line) => {
 });
 
 const calculateDistances = (N, M, inputMatrix) => {
-  console.log(inputMatrix);
-  inputMatrix = inputMatrix.map((line) =>
-    line.split("").map((char) => parseInt(char))
-  );
   console.log(inputMatrix);
 
   let ans = new Array(N);
