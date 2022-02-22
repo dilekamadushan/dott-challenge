@@ -5,4 +5,8 @@ module.exports = {
     node: true,
   },
   ignorePatterns: "*.js",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  }
 };

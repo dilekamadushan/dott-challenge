@@ -1,4 +1,5 @@
 // import the required library
+// @ts-ignore
 const readline = require("readline");
 import {calculateDistance} from "./algorithm";
 

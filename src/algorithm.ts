@@ -1,4 +1,4 @@
-export const calculateDistance = (N: number, M: number, matrix): number[][] => {
+export const calculateDistance = (N: number, M: number, matrix:number[][]): number[][] => {
     const rowLen: number = N;
     const colLen: number = M;
 
@@ -30,6 +30,7 @@ export const calculateDistance = (N: number, M: number, matrix): number[][] => {
 
     // now queue contains position of all ones
     while (queue.length > 0) {
+        // @ts-ignore
         const node: number[] = queue.shift();
         const row: number = node[0];
         const col: number = node[1];
