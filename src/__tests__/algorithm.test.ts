@@ -1,12 +1,13 @@
 import {calculateDistance} from "../algorithm";
-
 describe("calculate the distance correctly", () => {
 
     it("calculates the distance for a generic input", () => {
-        const answer = [[3, 2, 1, 0], [2, 1, 0, 0], [1, 0, 0, 1]];
-
+    const answer = [
+      [3, 2, 1, 0],
+      [2, 1, 0, 0],
+      [1, 0, 0, 1]];
         const returnedAnswer = calculateDistance(3, 4, [
-            [0, 0, 0, 1],
+      [0, 0, 0, 1],
             [0, 0, 1, 1],
             [0, 1, 1, 0]]);
         expect(returnedAnswer).toEqual(answer);
