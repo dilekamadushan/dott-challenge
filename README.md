@@ -2,6 +2,10 @@
 
 ## Available Scripts
 
+### `yarn install`
+
+Install  all the dependencies
+
 ### `yarn start`
 Transpile `Typescript` code into `Javascript` and start the application.
 
