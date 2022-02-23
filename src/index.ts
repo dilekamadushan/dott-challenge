@@ -54,6 +54,7 @@ readLineService.on('line', (line: string): void => {
  **/
 const printMatrix = (ans: number[][][]): void => {
   // Printing the answer.
+  console.log('\n');
   for (let k = 0; k < ans.length; k++) {
     for (let i = 0; i < ans[k].length; i++) {
       let line: string = '';
