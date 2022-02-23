@@ -18,6 +18,8 @@ Sample Input
 
 Launches the unit tests.
 
+Code is decomposed into testable functions to improve readability, modularity and testability
+
 ### `yarn lint:fix`
 Analyzes the code for any linting issues with the help of `eslint`
 
