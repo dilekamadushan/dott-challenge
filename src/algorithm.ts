@@ -27,9 +27,9 @@ export const calculateDistance = (
 
   const queue: number[][] = [];
 
-  // init two-dimensional array, where all ones marked with 0,
+  // init two-dimensional array, where all ones marked with distance 0,
   // and all 0's marked as Infinity;
-  // add all ones to the queue -> the main trick
+  // add all ones to the queue for traversal of the matrix
   for (let row = 0; row < maxRowLen; row++) {
     distances[row] = [];
 
@@ -67,7 +67,7 @@ export const calculateDistance = (
       )
         continue;
 
-      // apply the minimal distance + 1
+      // calculate the minimal distance
       const isVisited: boolean = distances[tempRow][tempCol] !== Infinity;
       distances[tempRow][tempCol] = Math.min(
         distances[tempRow][tempCol],

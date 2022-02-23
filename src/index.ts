@@ -1,4 +1,3 @@
-// import the required library
 import readline from 'readline';
 import { calculateDistance } from './algorithm';
 
@@ -14,6 +13,12 @@ let N: number = 0;
 let M: number = 0;
 let countUserInput: number = 0;
 
+/**
+ * @param string input from the user
+ * This function gets user input from the standard input
+ * and passes the input into algorthm to calculate the distance
+ * and finally calls the printMatrix function
+ **/
 readLineService.on('line', (line: string): void => {
   readInputLines.push(line);
   countUserInput += 1;
@@ -31,6 +36,7 @@ readLineService.on('line', (line: string): void => {
     const formattedInputLines: number[][] = readInputLines
       .slice(1)
       .map(line => line.split('').map(char => parseInt(char)));
+    // call the algorithm for each test input
     const ans = calculateDistance(N, M, formattedInputLines);
     answers.push(ans);
     numberOfCalculations += 1;
@@ -38,10 +44,14 @@ readLineService.on('line', (line: string): void => {
   }
   if (numberOfCalculations === totalTestCases) {
     printMatrix(answers);
+    // we exit the program here when all the test cases are processed
     process.exit(0);
   }
 });
-
+/**
+ * @param ans number[][][] input matrix
+ * This function prints all the answers in the standard output
+ **/
 const printMatrix = (ans: number[][][]): void => {
   // Printing the answer.
   for (let k = 0; k < ans.length; k++) {

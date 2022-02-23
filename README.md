@@ -22,7 +22,8 @@ Unit testing has been performed on the algorithm to cover all most all the cases
 ##Linting and Code Quality
 
 Code quality and readability is improved further with
-the usage of libraries like `eslint`and `prettier`. I've used them here. 
+the usage of libraries like `eslint`and `prettier`.
+`Commit Hooks` have been set with `Husky` to maintain high quality code.
 .I also have added comments to make the code more readable and maintainable.
 
 ##Algorithm Explained:
