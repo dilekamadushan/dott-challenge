@@ -16,17 +16,17 @@ Analyzes the code for any linting issues with the help of `eslint`
 
 Reformat the code to improve readability with `prettier`
 
-##Testing
+## Testing
 Unit testing has been performed on the algorithm to cover all most all the cases including edge cases.
 
-##Linting and Code Quality
+## Linting and Code Quality
 
 Code quality and readability is improved further with
 the usage of libraries like `eslint`and `prettier`.
 `Commit Hooks` have been set with `Husky` to maintain high quality code.
-.I also have added comments to make the code more readable and maintainable.
+I also have added comments to make the code more readable and maintainable.
 
-##Algorithm Explained:
+## Algorithm Explained:
 - Traverse through the matrix and initiate every cell.
 - Create an empty queue and populate it with white cells.
 - Now do a BFS traversal of white cells using above created queue. 
