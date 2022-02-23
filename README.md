@@ -5,6 +5,15 @@
 ### `yarn start`
 Transpile `Typescript` code into `Javascript` and start the application.
 
+Sample Input
+```angular2html
+1
+3 4
+0001
+0011
+0110
+```
+
 ### `yarn test`
 
 Launches the unit tests.
