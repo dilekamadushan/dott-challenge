@@ -56,7 +56,7 @@ const printMatrix = (ans: number[][][]): void => {
   // Printing the answer.
   for (let k = 0; k < ans.length; k++) {
     for (let i = 0; i < ans[k].length; i++) {
-      let line = '';
+      let line: string = '';
       for (let j = 0; j < ans[k][i].length; j++) {
         line += ans[k][i][j] + ' ';
       }
