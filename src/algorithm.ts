@@ -1,10 +1,21 @@
+/**
+ * @param N number rows of the matrix
+ * @param M number number of columns
+ * @param matrix number[][] input matrix
+ * @return number[][]
+ * This function calculates the distance to the closest white cell for each cell in the
+ * input matrix. This uses Breath First Approach (BFS) to keep the running time complexity
+ * to a minimum
+ * Time Complexity: O(N*M).
+ * Space Complexity: O(M*N).
+ **/
 export const calculateDistance = (
   N: number,
   M: number,
   matrix: number[][],
 ): number[][] => {
-  const rowLen: number = N;
-  const colLen: number = M;
+  const maxRowLen: number = N;
+  const maxColLen: number = M;
 
   const distances: number[][] = [];
   const directions: number[][] = [
@@ -19,10 +30,10 @@ export const calculateDistance = (
   // init two-dimensional array, where all ones marked with 0,
   // and all 0's marked as Infinity;
   // add all ones to the queue -> the main trick
-  for (let row = 0; row < rowLen; row++) {
+  for (let row = 0; row < maxRowLen; row++) {
     distances[row] = [];
 
-    for (let col = 0; col < colLen; col++) {
+    for (let col = 0; col < maxColLen; col++) {
       if (matrix[row][col] === 1) {
         queue.push([row, col]);
         distances[row][col] = 0;
@@ -49,9 +60,9 @@ export const calculateDistance = (
       // check array bounds, and also skip ones
       if (
         tempRow < 0 ||
-        tempRow >= rowLen ||
+        tempRow >= maxRowLen ||
         tempCol < 0 ||
-        tempCol >= colLen ||
+        tempCol >= maxColLen ||
         matrix[tempRow][tempCol] === 1
       )
         continue;
